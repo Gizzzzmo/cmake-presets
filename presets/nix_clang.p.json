@@ -1,0 +1,20 @@
+{
+    "version": 8,
+    "$schema": "https://cmake.org/cmake/help/v3.28/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
+    "include": [
+        "common.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "toolchain",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/@BUILD_DIR@/nix/clang/${presetName}",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        }
+    ]
+}

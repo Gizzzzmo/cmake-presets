@@ -1,0 +1,47 @@
+{
+    "version": 8,
+    "$schema": "https://cmake.org/cmake/help/v3.28/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
+    "include": [
+        "presets/current_profile.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "b",
+            "displayName": "B",
+            "inherits": [
+                "toolchain"
+            ]
+        },
+        {
+            "name": "a",
+            "displayName": "A",
+            "inherits": [
+                "toolchain"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "b",
+            "displayName": "B",
+            "configurePreset": "b"
+        },
+        {
+            "name": "a",
+            "displayName": "A",
+            "configurePreset": "a"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "b",
+            "displayName": "B",
+            "configurePreset": "b"
+        },
+        {
+            "name": "a",
+            "displayName": "A",
+            "configurePreset": "a"
+        }
+    ]
+}

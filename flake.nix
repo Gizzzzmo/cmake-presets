@@ -12,7 +12,7 @@
     (
       system: let
         pkgs = import nixpkgs {
-          inherit system ;
+          inherit system;
         };
         nativeBuildInputs = with pkgs; [cmake];
         buildInputs = [];

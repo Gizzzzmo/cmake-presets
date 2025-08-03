@@ -11,7 +11,7 @@
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/@BUILD_DIR@/clang/${presetName}",
             "cacheVariables": {
-                "WARNING": "ON"
+                "WARNING_DEFAULT": "ON"
             }
         }
     ]

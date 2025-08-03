@@ -2,6 +2,8 @@ CMAKE          ?= cmake
 CTEST 		   ?= ctest
 CLANG_TIDY     ?= clang-tidy
 CLANG_FORMAT   ?= clang-format
+MDFORMAT       ?= mdformat
+ALEJANDRA      ?= alejandra
 GIT 		   ?= git
 ECHO           := $(CMAKE) -E echo
 # echo no new line
@@ -77,7 +79,7 @@ lint: $(patsubst %,$(configure_pattern),$(current_preset))
 
 # format all source and header files tracked by git
 format:
-	@$(CMAKE) -P scripts/format.cmake $(CLANG_FORMAT)
+	@$(CMAKE) -P scripts/format.cmake $(CLANG_FORMAT) $(MDFORMAT) $(ALEJANDRA)
 
 # print current profile and current preset
 show:
